@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIVE Weather & Volcano News Update</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #0b1220;
+        color: #ffffff;
+    }
+
+    .news-container {
+        max-width: 980px;
+        margin: 40px auto;
+        background: #121a2f;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    }
+
+    .news-header {
+        background: linear-gradient(135deg, #d90429, #9b0208);
+        padding: 18px 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .news-header h1 {
+        margin: 0;
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    .live-badge {
+        background: #00e676;
+        color: #000;
+        padding: 6px 12px;
+        font-size: 12px;
+        font-weight: 700;
+        border-radius: 20px;
+    }
+
+    .news-body {
+        padding: 25px;
+        line-height: 1.7;
+    }
+
+    .datetime {
+        font-size: 14px;
+        opacity: 0.9;
+        margin-bottom: 12px;
+    }
+
+    .location {
+        font-size: 15px;
+        font-weight: 600;
+        color: #4cc9f0;
+        margin-bottom: 18px;
+    }
+
+    h2 {
+        font-size: 20px;
+        color: #ffd166;
+        margin-top: 0;
+    }
+
+    .notice {
+        background: #0e162a;
+        border-left: 6px solid #00e676;
+        padding: 12px 16px;
+        margin: 15px 0 20px;
+        border-radius: 6px;
+        font-weight: 600;
+    }
+
+    .section {
+        margin-top: 30px;
+        padding: 22px;
+        background: #1b2542;
+        border-radius: 12px;
+    }
+
+    .section h3 {
+        margin-top: 0;
+        color: #ffb703;
+        font-size: 18px;
+        letter-spacing: 0.5px;
+    }
+
+    .weather-list {
+        margin: 15px 0;
+        padding-left: 18px;
+    }
+
+    .weather-list li {
+        margin-bottom: 10px;
+    }
+
+    .name-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .name-box {
+        background: #0e162a;
+        padding: 10px;
+        border-radius: 8px;
+        text-align: center;
+        font-weight: 600;
+        color: #4cc9f0;
+    }
+
+    .weather-stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        margin-top: 25px;
+    }
+
+    .stat-box {
+        background: #0e162a;
+        padding: 18px;
+        border-radius: 12px;
+        text-align: center;
+    }
+
+    .stat-box span {
+        display: block;
+        font-size: 14px;
+        opacity: 0.8;
+    }
+
+    .stat-box strong {
+        font-size: 26px;
+        color: #4cc9f0;
+    }
+
+    .alert-level {
+        font-weight: bold;
+        color: #ff4d6d;
+    }
+
+    .news-footer {
+        background: #0e162a;
+        padding: 14px;
+        text-align: center;
+        font-size: 13px;
+        opacity: 0.7;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="news-container">
+    <div class="news-header">
+        <h1>LIVE NEWS UPDATE</h1>
+        <div class="live-badge">LIVE</div>
+    </div>
+
+    <div class="news-body">
+        <div class="datetime" id="phTime">Loading Philippine Date & Time...</div>
+
+        <div class="location">
+            📍 Focus Area: Canlaon City, Negros Oriental
+        </div>
+
+        <!-- WEATHER SECTION -->
+        <h2>Weather Situation</h2>
+
+        <div class="notice">
+            🌤️ WEATHER ADVISORY: <strong>NO TROPICAL CYCLONE OCCUR</strong> within the Philippine Area of Responsibility (PAR).
+        </div>
+
+        <ul class="weather-list">
+    <li><strong>Northeast Monsoon (Amihan)</strong> affecting Northern and Central Luzon.</li>
+    <li><strong>Easterlies</strong> affecting the rest of the country.</li>
+        </ul>
+
+        <div class="weather-stats">
+            <div class="stat-box">
+                <span>Wind Speed</span>
+                <strong>9 km/h</strong>
+            </div>
+            <div class="stat-box">
+                <span>Temperature</span>
+                <strong>24°C</strong>
+            </div>
+        </div>
+
+        <!-- 2026 TROPICAL CYCLONE NAMES -->
+        <div class="section">
+            <h3>🌪️ Weather Forecast 2026 – Tropical Cyclone Names</h3>
+            <div class="name-grid">
+                <div class="name-box">Ada</div>
+                <div class="name-box">Basyang</div>
+                <div class="name-box">Caloy</div>
+                <div class="name-box">Domeng</div>
+                <div class="name-box">Ester</div>
+                <div class="name-box">Francisco</div>
+                <div class="name-box">Gardo</div>
+                <div class="name-box">Henry</div>
+                <div class="name-box">Inday</div>
+                <div class="name-box">Josie</div>
+                <div class="name-box">Kiyapo</div>
+                <div class="name-box">Luis</div>
+                <div class="name-box">Maymay</div>
+                <div class="name-box">Neneng</div>
+                <div class="name-box">Obet</div>
+                <div class="name-box">Pilandok</div>
+                <div class="name-box">Queenie</div>
+                <div class="name-box">Rosal</div>
+                <div class="name-box">Samuel</div>
+                <div class="name-box">Tomas</div>
+                <div class="name-box">Umberto</div>
+                <div class="name-box">Venus</div>
+                <div class="name-box">Waldo</div>
+                <div class="name-box">Yayang</div>
+                <div class="name-box">Zeny</div>
+            </div>
+        </div>
+
+<!-- BULKANG KANLAON -->
+<div class="section">
+    <h3>🌋 BULKANG KANLAON</h3>
+    <p><strong>Buod ng 24 oras na pagmamanman</strong></p>
+    <p>📅 30 Disyembre 2025 • ⏰ Alas-12 ng umaga</p>
+    <hr style="border:0.5px solid #2f3c66; margin:15px 0;">
+
+    <p><strong>Volcano:</strong> Kanlaon</p>
+    <p><strong>Alert Level:</strong> <span class="alert-level">Alert Level 2</span></p>
+    <p><strong>Status ng Alert Level:</strong> Pagtaas ng aktibidad</p>
+    <p><strong>Volcanic Earthquakes:</strong> 12 volcanic earthquakes</p>
+    <p><strong>Sulfur Dioxide Flux (SO₂):</strong> 1,336 tonelada / araw <em>(29 Disyembre 2025)</em></p>
+    <p><strong>Plume (Steaming):</strong> Mahinang pagsingaw; 150 metrong taas; napadpad sa timog-kanluran at kanluran</p>
+    <p><strong>Ground Deformation:</strong> Pamamaga ng bulkan</p>
+</div>
+    </div>
+<!-- EARTHQUAKE UPDATE -->
+<div class="section">
+    <h3>🌎 EARTHQUAKE UPDATE</h3>
+    <p>
+        No earthquake recorded during the latest monitoring period.
+    </p>
+</div>
+    
+    <div class="news-footer">
+    © PAGASA • PHIVOLCS • Windy | Stay Alert • Stay Safe
+    </div>
+</div>
+
+<script>
+function updatePhilippineTime() {
+    const options = {
+        timeZone: "Asia/Manila",
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "numeric",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true
+    };
+    document.getElementById("phTime").innerHTML =
+        "📅 " + new Date().toLocaleString("en-US", options) + " (Philippine Time)";
+}
+setInterval(updatePhilippineTime, 1000);
+updatePhilippineTime();
+</script>
+
+</body>
+</html>
